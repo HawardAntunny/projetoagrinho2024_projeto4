@@ -55,6 +55,22 @@ header p {
     cursor: pointer;
 }
 
+#info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#info-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#info-text {
+    margin-top: 10px;
+    color: #333;
+}
+
 @media (min-width: 768px) {
     .infographic {
         flex-direction: row;
@@ -67,4 +83,24 @@ header p {
         min-width: 200px;
         max-width: 45%;
     }
+}
+
+.aba-conteudo {
+    margin-top: 20px;
+}
+
+.imagem-info {
+    text-align: center;
+}
+
+.imagem-info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.imagem-info p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--branco);
 }
