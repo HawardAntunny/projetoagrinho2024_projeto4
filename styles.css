@@ -27,15 +27,16 @@ header h1 {
     font-family: 'Georgia', serif; /* Estilo diferente para o título */
 }
 
-header p {
+.sub-header {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Aumentar o tamanho da frase */
 }
 
 .infographic {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* Permitir que os botões fiquem em uma linha */
     gap: 20px;
+    justify-content: space-between;
 }
 
 .step {
@@ -44,15 +45,11 @@ header p {
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-}
-
-.step h2 {
-    margin-top: 0;
-    color: #333;
-}
-
-.step p {
-    color: #555;
+    flex: 1;
+    min-width: 150px; /* Garantir que os botões fiquem em uma linha */
+    text-align: center;
+    font-weight: bold; /* Texto mais grosso */
+    font-size: 1.2em; /* Aumentar o tamanho do texto */
 }
 
 .step:hover {
@@ -77,20 +74,6 @@ header p {
     font-size: 1.2em;
 }
 
-@media (min-width: 768px) {
-    .infographic {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .step {
-        flex: 1;
-        min-width: 200px;
-        max-width: 45%;
-    }
-}
-
 .aba-conteudo {
     margin-top: 20px;
 }
@@ -109,4 +92,14 @@ header p {
     margin-top: 10px;
     font-size: 18px;
     color: #fff;
+}
+
+@media (min-width: 768px) {
+    .infographic {
+        gap: 10px;
+    }
+
+    .step {
+        min-width: 200px; /* Ajuste fino para telas maiores */
+    }
 }
