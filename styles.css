@@ -1,51 +1,96 @@
-/* Reset e estilização geral */
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #556B2F; /* Verde musgo */
 }
 
-.conteudo-principal {
-    max-width: 800px;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilização do título */
-.titulo-principal {
+header {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #333;
+    margin-bottom: 30px;
+    background-color: #8B4513; /* Laranja escuro */
+    padding: 20px;
+    border-radius: 8px;
 }
 
-/* Estilização dos botões */
-.botoes {
+header h1 {
+    font-size: 2.5em;
+    color: #fff;
+    font-family: 'Georgia', serif; /* Estilo diferente para o título */
+}
+
+header p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.infographic {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.botao {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
+.step {
+    background-color: #FFA07A; /* Laranja claro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
-.botao:hover {
-    background-color: #45a049;
+.step h2 {
+    margin-top: 0;
+    color: #333;
 }
 
-/* Estilização da área de conteúdo */
+.step p {
+    color: #555;
+}
+
+.step:hover {
+    background-color: #FF8C00; /* Cor ao passar o mouse */
+    cursor: pointer;
+}
+
+#info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#info-image {
+    max-width: 80%; /* Imagens maiores */
+    height: auto;
+    border-radius: 8px;
+}
+
+#info-text {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+    .infographic {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .step {
+        flex: 1;
+        min-width: 200px;
+        max-width: 45%;
+    }
+}
+
 .aba-conteudo {
     margin-top: 20px;
 }
@@ -63,12 +108,5 @@ body {
 .imagem-info p {
     margin-top: 10px;
     font-size: 18px;
-    color: #333;
-}
-
-/* Estilização responsiva */
-@media (min-width: 768px) {
-    .botoes {
-        flex-direction: row;
-    }
+    color: #fff;
 }
