@@ -1,0 +1,70 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+header p {
+    color: #666;
+}
+
+.infographic {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.step h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.step p {
+    color: #555;
+}
+
+.step:hover {
+    background-color: #e0ffe0;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .infographic {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .step {
+        flex: 1;
+        min-width: 200px;
+        max-width: 45%;
+    }
+}
